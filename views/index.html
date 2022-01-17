@@ -1,0 +1,46 @@
+
+% rebase('base.tpl')
+
+
+<div class="container">
+  <div class="page-header" id="banner">
+    <div class="row my-4">
+      <div class="col-12">
+        <p><img src="/img/logo.png" alt="よろず屋" width="40%"></p>
+        <p class="lead">商品をお選びください。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    % for item in products:
+    <div class="col-lg-4">
+      <div class="card border-secondary mb-3">
+        <div class="card-body">
+          <h4 class="card-title">{{item.name}}</h4>
+          <p class="card-text">{{item.info}}</p>
+          <div class="bs-component">
+            <form action="buy" method="POST">
+              <input name="item-id" type="hidden" value="{{item.id}}">
+              <p class="card-text">{{item.price}}円</p>
+              <select class="form-control" id="exampleSelect1" name="num">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <button type="submit" class="btn btn-primary">購入</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    % end
+
+  </div>
+</div>
+
+
+
