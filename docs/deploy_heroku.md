@@ -20,6 +20,12 @@
 リポジトリをforkすると、自分のGitHubアカウントにリポジトリが作成されます。次のコマンドを実行して、ローカルPCにcloneします。
 
 ```bash
+git clone https://github.com/<GitHubのアカウント名>/sample-webapp.git
+```
+
+または
+
+```bash
 git clone git@github.com:<GitHubのアカウント名>/sample-webapp.git
 ```
 
@@ -27,10 +33,21 @@ git clone git@github.com:<GitHubのアカウント名>/sample-webapp.git
 
 次のコマンドでHonokaのCSSをダウンロードし、展開します。
 
+Linuxの場合:
+
 ```bash
 cd sample-webapp
 wget https://github.com/windyakin/Honoka/releases/download/v4.4.1/bootstrap-honoka-4.4.1-dist.zip
 unzip bootstrap-honoka-4.4.1-dist.zip
+rm bootstrap-honoka-4.4.1-dist.zip
+```
+
+Windowsの場合:
+
+```bash
+cd sample-webapp
+Invoke-WebRequest -Uri https://github.com/windyakin/Honoka/releases/download/v4.4.1/bootstrap-honoka-4.4.1-dist.zip -OutFile bootstrap-honoka-4.4.1-dist.zip
+Expand-Archive bootstrap-honoka-4.4.1-dist.zip -DestinationPath .
 rm bootstrap-honoka-4.4.1-dist.zip
 ```
 
@@ -59,7 +76,7 @@ web: python app.py
 次のコマンドを実行し、変更をコミットします。
 
 ```bash
-git add .
+git add -f Procfile honoka
 git commit -m "first commit"
 ```
 
