@@ -10,8 +10,6 @@ Python3.9で動作確認しています。必要な外部ライブラリはい�
 pip install -r requirements.txt
 ```
 
-Bootstrapに準拠したCSSフレームワークであるHonokaが必要です。[こちら](https://github.com/windyakin/Honoka/releases/download/v4.4.1/bootstrap-honoka-4.4.1-dist.zip) からダウンロードしてapp.pyがあるディレクトリにhonokaという名前で展開してください。通常そのままzipファイルを解凍するとhonokaディレクトリになります。
-
 ## 起動方法
 
 以下のコマンドで起動します。
